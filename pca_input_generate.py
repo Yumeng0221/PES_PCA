@@ -1,6 +1,5 @@
 # Generate information using PCA for construct potential energy sruface
 # Yumeng Cao Dec. 11th, 2024
-# modified on Jul 7th for input directory name
 
 import pandas as pd
 from sklearn.decomposition import PCA
@@ -72,4 +71,5 @@ def main():
     print(f"Results saved to {output_file_path}")
 
 if __name__=="__main__":
+
     main()
