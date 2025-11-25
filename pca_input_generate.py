@@ -60,16 +60,18 @@ def main():
     with open(output_file_path, 'w') as file: 
         file.write("Coefficient: \n")
         for row in coefficients:
-            file.write(str(row) + "\n")
+            file.write(str(row) + "\n") #coefficients 
+        
         file.write("\nMean_values: \n")
-        file.write(str(mean_values) + "\n")
-
+        file.write(str(mean_values) + "\n") #meanvalue
+        
         file.write("\nGIC additional line: \n")
         file.write(str(output_PC1) + "\n")
-        file.write(str(output_PC2) + "\n")
+        file.write(str(output_PC2) + "\n") #GIC line for Gaussian
 
     print(f"Results saved to {output_file_path}")
 
 if __name__=="__main__":
 
     main()
+
