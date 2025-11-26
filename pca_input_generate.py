@@ -1,5 +1,11 @@
-# Generate information using PCA for construct potential energy sruface
-# Yumeng Cao Dec. 11th, 2024
+# Generate PCA-based features to construct a Potential Energy Surface (PES)
+# Usage:
+#   Run the script, then enter:
+#     1) the directory containing the Excel file, and
+#     2) the Excel file name.
+# Outputs:
+#   - A figure with PCA scatter points (PES projection)
+#   - results.txt containing PCA coefficients and an extra line formatted for GIC scan calculations
 
 import pandas as pd
 from sklearn.decomposition import PCA
@@ -74,4 +80,5 @@ def main():
 if __name__=="__main__":
 
     main()
+
 
