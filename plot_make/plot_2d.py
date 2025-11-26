@@ -1,4 +1,4 @@
-# Construct PES based on the energies.xlsx
+# Construct PES based on the energies.xlsx data
 
 import pandas as pd
 import numpy as np
@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 def main():
     # Load the data
-    data = pd.read_excel('energies_diff.xlsx', header=None)
+    data = pd.read_excel('energies.xlsx', header=None) #change the filename here as needed. 
 
     x = data.iloc[0, 1:].values
     y = data.iloc[1:, 0].values
