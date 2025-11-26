@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 def main(): 
     
-    data = pd.read_excel('energies.xlsx', header=None)
+    data = pd.read_excel('energies.xlsx', header=None) # Update the energy filename here if needed. 
 
     x = data.iloc[0, 1:].values
     y = data.iloc[1:, 0].values
