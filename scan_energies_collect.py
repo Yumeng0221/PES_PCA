@@ -1,3 +1,10 @@
+# This script extracts all stationary points from Gaussian relaxed scan calculations.
+# Usage:
+#   Run the script and provide the directory containing the Gaussian output files.
+# Notes:
+#   - Update the "level of theory" in the script to match the one used in your calculations.
+#   - If your scan includes more than 30 steps, adjust the number of columns accordingly.
+
 import os
 import re
 import pandas as pd
@@ -15,8 +22,8 @@ def main():
         input_dir += os.path.sep
     print(f" Input Directory: {input_dir}")
 
-    # Create the output file DataFrame (supports up to 16 energies -> 17 columns including the first label), add more as needed
-    columns = ["Filename/PC"] + [f"E{i}" for i in range(1, 30)]
+    # Create the output file DataFrame (supports up to 30 energies -> 31 columns including the first label), add more as needed
+    columns = ["Filename/PC"] + [f"E{i}" for i in range(1, 31)]
     final_df = pd.DataFrame(columns=columns)
 
     found_log = False  # ← initialize to avoid NameError
@@ -39,7 +46,7 @@ def main():
 
             # Extract energy positions
             for i, line in enumerate(lines):
-                match = re.search(r"E\(UM062X\)\s*=\s*(-?\d+\.\d+)", line)  # adjust if your level of theory changes
+                match = re.search(r"E\(UM062X\)\s*=\s*(-?\d+\.\d+)", line)  # adjust based on your level of theory
                 if match:
                     energy_value = float(match.group(1))
                     energy_positions.append((i, energy_value))
