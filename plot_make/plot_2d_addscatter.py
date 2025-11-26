@@ -2,6 +2,9 @@
 # (produced by scan_energies_collect.py). Scatter points represent critical points 
 # such as reactants, transition states, and products. 
 # Requires the initial data files (data.xlsx) for the scatter plot to be located in the same directory.
+# Usage: Run the script, then enter:
+#    1) the directory containing the Excel file, and
+#    2) the Excel file name.
 
 from sklearn.decomposition import PCA
 import pandas as pd
