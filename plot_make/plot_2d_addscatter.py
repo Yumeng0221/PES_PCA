@@ -23,8 +23,8 @@ pca = PCA(n_components=2)
 pca_coords = pca.fit_transform(numeric_data)  # shape: (n_samples, 2)
 
 # Load the PES data
-energy_file_path = os.path.join(input_dir, "energies_diff.xlsx")
-data = pd.read_excel(energy_file_path, header=None) #modify here is other energy table is using. 
+energy_file_path = os.path.join(input_dir, "energies.xlsx") #modify here is other energy table is using.
+data = pd.read_excel(energy_file_path, header=None) 
 x = data.iloc[0, 1:].values
 y = data.iloc[1:, 0].values
 z = data.iloc[1:, 1:].values
