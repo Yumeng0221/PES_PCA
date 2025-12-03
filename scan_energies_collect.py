@@ -2,8 +2,8 @@
 # Usage:
 #   Run the script and provide the directory containing the Gaussian output files.
 # Notes:
-#   - Update the "level of theory" in the script to match the one used in your calculations.
-#   - If your scan includes more than 30 steps, adjust the number of columns accordingly.
+#   - Update the "level of theory" in the script to match the one used in your calculations (line 25). 
+#   - If your scan includes more than 30 steps, adjust the number of columns accordingly (line 28). 
 
 import os
 import re
