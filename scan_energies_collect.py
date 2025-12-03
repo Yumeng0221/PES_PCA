@@ -22,6 +22,8 @@ def main():
         input_dir += os.path.sep
     print(f" Input Directory: {input_dir}")
 
+    functional_string = "RB3LYP" # adjust based on your level of theory
+    
     # Create the output file DataFrame (supports up to 30 energies -> 31 columns including the first label), add more as needed
     columns = ["Filename/PC"] + [f"E{i}" for i in range(1, 31)]
     final_df = pd.DataFrame(columns=columns)
@@ -46,7 +48,8 @@ def main():
 
             # Extract energy positions
             for i, line in enumerate(lines):
-                match = re.search(r"E\(UM062X\)\s*=\s*(-?\d+\.\d+)", line)  # adjust based on your level of theory
+                pattern = rf"E\({functional_string}\)\s*=\s*(-?\d+\.\d+)"
+                match = re.search(pattern, line)
                 if match:
                     energy_value = float(match.group(1))
                     energy_positions.append((i, energy_value))
