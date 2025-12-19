@@ -11,6 +11,7 @@ Constructing low-dimensional PES representations for reactions involving many co
 **Requirements**
 
 Python ≥ 3.8
+
 Required Python packages:
 numpy
 pandas
