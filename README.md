@@ -4,7 +4,7 @@ Constructing low-dimensional PES representations for reactions involving many co
 
 **This workflow:**
 1. Uses PCA to identify dominant structural variations from multiple internal coordinates (e.g., bond lengths, angles, dihedrals),
-2. Uses the resulting principal components (PC1 and PC2) as physically meaningful scan axes,
+2. Uses the resulting principal components (PC1 and PC2) as relaxed scan axes,
 3. Performs relaxed surface scans using electronic structure software (e.g., Gaussian),
 4. Visualizes 2D or 3D PESs.
 
