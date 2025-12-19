@@ -9,8 +9,8 @@ Constructing low-dimensional PES representations for reactions involving many co
 4. Visualizes 2D or 3D PESs.
 
 **Requirements**
-Python ≥ 3.8
 
+Python ≥ 3.8
 Required Python packages:
 numpy
 pandas
