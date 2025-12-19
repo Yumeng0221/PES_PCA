@@ -23,4 +23,5 @@ Gaussian 16 (examples provided),
 but the workflow can be adapted to other packages.
 
 **Example Usage**
+
 A Jupyter Notebook example is provided in the examples/ directory to walk you through the complete procedure step by step.
